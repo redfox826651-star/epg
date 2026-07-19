@@ -21,7 +21,7 @@ module.exports = {
   days: 1,
   buildId: undefined,
   async url({ channel }) {
-    if (module.exports.buildId === undefined) {
+    if (module.exports.buildId === undefined || module.exports.buildId === null) {
       module.exports.buildId = await module.exports.fetchBuildId()
     }
     return `https://tv.trueid.net/_next/data/${module.exports.buildId}/th-${channel.lang}.json?channelSlug=${channel.site_id}&path=${channel.site_id}`
@@ -41,7 +41,7 @@ module.exports = {
     return programs
   },
   async channels({ lang = 'en' }) {
-    if (module.exports.buildId === undefined) {
+    if (module.exports.buildId === undefined || module.exports.buildId === null) {
       module.exports.buildId = await module.exports.fetchBuildId()
     }
 
@@ -67,19 +67,51 @@ module.exports = {
   },
   // Since the website uses Next.js, each time the developers deploy a new version, a new build ID is generated.
   // This permits us to always fetch the proper build ID before making requests.
+  //
+  // The build-id page is behind Cloudflare. From this server's IP it usually returns 200, but
+  // intermittently gets challenged - and when it does, buildId ends up null and EVERY EPG
+  // request breaks (the URL becomes .../data/null/...). So we fetch it through FlareSolverr
+  // (which solves the challenge), falling back to a direct request if FlareSolverr is down.
+  // NOTE: this page is 403 via the residential proxy, so FlareSolverr is called WITHOUT a proxy.
   async fetchBuildId() {
-    const data = await axios
-      .get('https://tv.trueid.net/th-en')
-      .then(r => r.data)
-      .catch(console.error)
+    const url = 'https://tv.trueid.net/th-en'
+    let data = null
+
+    try {
+      data = await module.exports.fetchViaFlareSolverr(url)
+    } catch (err) {
+      console.error('tv.trueid.net: FlareSolverr buildId fetch failed:', err.message)
+    }
+
+    if (!data) {
+      data = await axios
+        .get(url)
+        .then(r => r.data)
+        .catch(console.error)
+    }
 
     if (data) {
       const $ = cheerio.load(data)
       const nextData = JSON.parse($('#__NEXT_DATA__').text())
       return nextData?.buildId || null
-    } else {
-      return null
     }
+
+    return null
+  },
+  async fetchViaFlareSolverr(url) {
+    const endpoint = process.env.FLARESOLVERR_URL || 'http://127.0.0.1:8191/v1'
+    const res = await axios.post(
+      endpoint,
+      { cmd: 'request.get', url, maxTimeout: 60000 },
+      { headers: { 'Content-Type': 'application/json' }, timeout: 75000, proxy: false }
+    )
+
+    const solution = res.data && res.data.solution
+    if (!res.data || res.data.status !== 'ok' || !solution) {
+      throw new Error(res.data && res.data.message ? res.data.message : 'no solution')
+    }
+
+    return solution.response
   }
 }
 
