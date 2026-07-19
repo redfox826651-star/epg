@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+  <channel site="tvtoday.de" site_id="2NEO" lang="country_DE" xmltv_id="">ZDFneo</channel>
+  <channel site="tvtoday.de" site_id="3PLUS" lang="country_DE" xmltv_id="">3+</channel>
+  <channel site="tvtoday.de" site_id="3SAT" lang="country_DE" xmltv_id="">3sat</channel>
+  <channel site="tvtoday.de" site_id="13TH" lang="country_DE" xmltv_id="">13th Street</channel>
+  <channel site="tvtoday.de" site_id="123TV" lang="country_DE" xmltv_id="">123.tv</channel>
+  <channel site="tvtoday.de" site_id="ADULT" lang="country_DE" xmltv_id="">Adult Channel</channel>
+  <channel site="tvtoday.de" site_id="ALJAZ" lang="country_DE" xmltv_id="">Al Jazeera</channel>
+  <channel site="tvtoday.de" site_id="ALPHA" lang="country_DE" xmltv_id="">ARD alpha</channel>
+  <channel site="tvtoday.de" site_id="AMS" lang="country_DE" xmltv_id="">Auto Motor Sport TV</channel>
+  <channel site="tvtoday.de" site_id="ANIXE" lang="country_DE" xmltv_id="">Anixe HD</channel>
+  <channel site="tvtoday.de" site_id="APLAN" lang="country_DE" xmltv_id="">Animal Planet</channel>
+  <channel site="tvtoday.de" site_id="ARD" lang="country_DE" xmltv_id="">Das Erste</channel>
+  <channel site="tvtoday.de" site_id="ARTE" lang="country_DE" xmltv_id="">Arte</channel>
+  <channel site="tvtoday.de" site_id="ATV" lang="country_DE" xmltv_id="">ATV</channel>
+  <channel site="tvtoday.de" site_id="ATV2" lang="country_DE" xmltv_id="">ATV II</channel>
+  <channel site="tvtoday.de" site_id="AXN" lang="country_DE" xmltv_id="">AXN Black</channel>
+  <channel site="tvtoday.de" site_id="BBC" lang="country_DE" xmltv_id="">BBC News (Europe)</channel>
+  <channel site="tvtoday.de" site_id="BBC1" lang="country_DE" xmltv_id="">BBC One</channel>
+  <channel site="tvtoday.de" site_id="BBC2" lang="country_DE" xmltv_id="">BBC Two</channel>
+  <channel site="tvtoday.de" site_id="BBC4" lang="country_DE" xmltv_id="">BBC four</channel>
+  <channel site="tvtoday.de" site_id="BBC-N" lang="country_DE" xmltv_id="">BBC News (UK)</channel>
+  <channel site="tvtoday.de" site_id="BE1" lang="country_DE" xmltv_id="">VRT 1</channel>
+  <channel site="tvtoday.de" site_id="BERG" lang="country_DE" xmltv_id="">Bergblick</channel>
+  <channel site="tvtoday.de" site_id="BIBEL" lang="country_DE" xmltv_id="">Bibel TV</channel>
+  <channel site="tvtoday.de" site_id="BLM" lang="country_DE" xmltv_id="">Bloomberg TV</channel>
+  <channel site="tvtoday.de" site_id="BR" lang="country_DE" xmltv_id="">BR</channel>
+  <channel site="tvtoday.de" site_id="BULI" lang="country_DE" xmltv_id="">sky sport bundesliga</channel>
+  <channel site="tvtoday.de" site_id="BUTV" lang="country_DE" xmltv_id="">Beate Uhse TV</channel>
+  <channel site="tvtoday.de" site_id="C5" lang="country_DE" xmltv_id="">Canale 5</channel>
+  <channel site="tvtoday.de" site_id="C-NET" lang="country_DE" xmltv_id="">Cartoon Network</channel>
+  <channel site="tvtoday.de" site_id="CC" lang="country_DE" xmltv_id="">Comedy Central</channel>
+  <channel site="tvtoday.de" site_id="CH21" lang="country_DE" xmltv_id="">Channel21</channel>
+  <channel site="tvtoday.de" site_id="CIN" lang="country_DE" xmltv_id="">sky cinema premiere</channel>
+  <channel site="tvtoday.de" site_id="CLASS" lang="country_DE" xmltv_id="">Classica</channel>
+  <channel site="tvtoday.de" site_id="CNBC" lang="country_DE" xmltv_id="">CNBC</channel>
+  <channel site="tvtoday.de" site_id="CNN" lang="country_DE" xmltv_id="">CNN</channel>
+  <channel site="tvtoday.de" site_id="CNN-T" lang="country_DE" xmltv_id="">CNN Türk</channel>
+  <channel site="tvtoday.de" site_id="CPLUS" lang="country_DE" xmltv_id="">Canal+</channel>
+  <channel site="tvtoday.de" site_id="CPLUSC" lang="country_DE" xmltv_id="">Canal+ Cinéma</channel>
+  <channel site="tvtoday.de" site_id="CPLUSS" lang="country_DE" xmltv_id="">Canal+ Sport</channel>
+  <channel site="tvtoday.de" site_id="CRIN" lang="country_DE" xmltv_id="">Crime + Investigation</channel>
+  <channel site="tvtoday.de" site_id="DAZN" lang="country_DE" xmltv_id="">DAZN</channel>
+  <channel site="tvtoday.de" site_id="DF1" lang="country_DE" xmltv_id="">DF1</channel>
+  <channel site="tvtoday.de" site_id="DISNE" lang="country_DE" xmltv_id="">Disney Channel</channel>
+  <channel site="tvtoday.de" site_id="DMAX" lang="country_DE" xmltv_id="">DMAX</channel>
+  <channel site="tvtoday.de" site_id="DMC" lang="country_DE" xmltv_id="">Deluxe Music</channel>
+  <channel site="tvtoday.de" site_id="DMF" lang="country_DE" xmltv_id="">DMF</channel>
+  <channel site="tvtoday.de" site_id="DOKUS" lang="country_DE" xmltv_id="">Dokusat</channel>
+  <channel site="tvtoday.de" site_id="DR1" lang="country_DE" xmltv_id="">DK1</channel>
+  <channel site="tvtoday.de" site_id="DR2" lang="country_DE" xmltv_id="">DR2</channel>
+  <channel site="tvtoday.de" site_id="EOTV" lang="country_DE" xmltv_id="">More than Sports TV</channel>
+  <channel site="tvtoday.de" site_id="ES1" lang="country_DE" xmltv_id="">eSports One</channel>
+  <channel site="tvtoday.de" site_id="EURO" lang="country_DE" xmltv_id="">Eurosport 1</channel>
+  <channel site="tvtoday.de" site_id="EURO2" lang="country_DE" xmltv_id="">Eurosport 2</channel>
+  <channel site="tvtoday.de" site_id="EURO-D" lang="country_DE" xmltv_id="">Euro D</channel>
+  <channel site="tvtoday.de" site_id="EURO-S" lang="country_DE" xmltv_id="">Euro Star</channel>
+  <channel site="tvtoday.de" site_id="EURON" lang="country_DE" xmltv_id="">Euronews Deutschland</channel>
+  <channel site="tvtoday.de" site_id="EX-SP" lang="country_DE" xmltv_id="">Extreme Sports</channel>
+  <channel site="tvtoday.de" site_id="FATV" lang="country_DE" xmltv_id="">Fashion TV HD</channel>
+  <channel site="tvtoday.de" site_id="FES" lang="country_DE" xmltv_id="">One</channel>
+  <channel site="tvtoday.de" site_id="FFTV" lang="country_DE" xmltv_id="">Fix &amp; Foxi</channel>
+  <channel site="tvtoday.de" site_id="FR24E" lang="country_DE" xmltv_id="">France 24 (engl.)</channel>
+  <channel site="tvtoday.de" site_id="FR24F" lang="country_DE" xmltv_id="">France 24 (franz.)</channel>
+  <channel site="tvtoday.de" site_id="FRA2" lang="country_DE" xmltv_id="">France 2</channel>
+  <channel site="tvtoday.de" site_id="FRA3" lang="country_DE" xmltv_id="">France 3</channel>
+  <channel site="tvtoday.de" site_id="FRA4" lang="country_DE" xmltv_id="">France 4</channel>
+  <channel site="tvtoday.de" site_id="FRA5" lang="country_DE" xmltv_id="">France 5</channel>
+  <channel site="tvtoday.de" site_id="GEO" lang="country_DE" xmltv_id="">GEO Television</channel>
+  <channel site="tvtoday.de" site_id="GOLD" lang="country_DE" xmltv_id="">Goldstar</channel>
+  <channel site="tvtoday.de" site_id="GUSTO" lang="country_DE" xmltv_id="">BonGusto</channel>
+  <channel site="tvtoday.de" site_id="HDDIS" lang="country_DE" xmltv_id="">Discovery HD</channel>
+  <channel site="tvtoday.de" site_id="HEIMA" lang="country_DE" xmltv_id="">Heimatkanal</channel>
+  <channel site="tvtoday.de" site_id="HGTV" lang="country_DE" xmltv_id="">Home &amp; Garden TV</channel>
+  <channel site="tvtoday.de" site_id="HH1" lang="country_DE" xmltv_id="">Hamburg 1</channel>
+  <channel site="tvtoday.de" site_id="HISHD" lang="country_DE" xmltv_id="">The History Channel</channel>
+  <channel site="tvtoday.de" site_id="HR" lang="country_DE" xmltv_id="">HR</channel>
+  <channel site="tvtoday.de" site_id="HSE" lang="country_DE" xmltv_id="">HSE</channel>
+  <channel site="tvtoday.de" site_id="HSEEXTRA" lang="country_DE" xmltv_id="">HSE Extra</channel>
+  <channel site="tvtoday.de" site_id="JUKE" lang="country_DE" xmltv_id="">Jukebox</channel>
+  <channel site="tvtoday.de" site_id="K1" lang="country_DE" xmltv_id="">kabel eins</channel>
+  <channel site="tvtoday.de" site_id="K1CLA" lang="country_DE" xmltv_id="">kabel eins classics</channel>
+  <channel site="tvtoday.de" site_id="K1DOKU" lang="country_DE" xmltv_id="">kabel eins Doku</channel>
+  <channel site="tvtoday.de" site_id="K7I" lang="country_DE" xmltv_id="">Kanal 7 Int</channel>
+  <channel site="tvtoday.de" site_id="KIKA" lang="country_DE" xmltv_id="">KiKA</channel>
+  <channel site="tvtoday.de" site_id="KINOW" lang="country_DE" xmltv_id="">Kinowelt TV</channel>
+  <channel site="tvtoday.de" site_id="KTV" lang="country_DE" xmltv_id="">KTV</channel>
+  <channel site="tvtoday.de" site_id="LAUNE" lang="country_DE" xmltv_id="">Gute Laune TV</channel>
+  <channel site="tvtoday.de" site_id="LEITV" lang="country_DE" xmltv_id="">Leipzig Fernsehen</channel>
+  <channel site="tvtoday.de" site_id="LUSTP" lang="country_DE" xmltv_id="">Lust Pur</channel>
+  <channel site="tvtoday.de" site_id="MAPO" lang="country_DE" xmltv_id="">MarcoPolo</channel>
+  <channel site="tvtoday.de" site_id="MDR" lang="country_DE" xmltv_id="">MDR</channel>
+  <channel site="tvtoday.de" site_id="MEZZO" lang="country_DE" xmltv_id="">Mezzo</channel>
+  <channel site="tvtoday.de" site_id="MFTV1" lang="country_DE" xmltv_id="">Fußball.TV1</channel>
+  <channel site="tvtoday.de" site_id="MOVTV" lang="country_DE" xmltv_id="">Motorvision TV</channel>
+  <channel site="tvtoday.de" site_id="MTV" lang="country_DE" xmltv_id="">MTV</channel>
+  <channel site="tvtoday.de" site_id="N3" lang="country_DE" xmltv_id="">NDR</channel>
+  <channel site="tvtoday.de" site_id="N24DOKU" lang="country_DE" xmltv_id="">N24 Doku</channel>
+  <channel site="tvtoday.de" site_id="N-GHD" lang="country_DE" xmltv_id="">Nat Geo HD</channel>
+  <channel site="tvtoday.de" site_id="N-GW" lang="country_DE" xmltv_id="">Nat Geo Wild</channel>
+  <channel site="tvtoday.de" site_id="NAUCH" lang="country_DE" xmltv_id="">Nautical Channel</channel>
+  <channel site="tvtoday.de" site_id="NHK" lang="country_DE" xmltv_id="">NHK World-Japan</channel>
+  <channel site="tvtoday.de" site_id="NICK" lang="country_DE" xmltv_id="">NICK</channel>
+  <channel site="tvtoday.de" site_id="NICKJ" lang="country_DE" xmltv_id="">nickjr.</channel>
+  <channel site="tvtoday.de" site_id="NICKT" lang="country_DE" xmltv_id="">nicktoons</channel>
+  <channel site="tvtoday.de" site_id="NOWUS" lang="country_DE" xmltv_id="">NOW!</channel>
+  <channel site="tvtoday.de" site_id="NTV" lang="country_DE" xmltv_id="">ntv</channel>
+  <channel site="tvtoday.de" site_id="OE24TV" lang="country_DE" xmltv_id="">oe24.TV</channel>
+  <channel site="tvtoday.de" site_id="ORF1" lang="country_DE" xmltv_id="">ORF 1</channel>
+  <channel site="tvtoday.de" site_id="ORF2" lang="country_DE" xmltv_id="">ORF 2</channel>
+  <channel site="tvtoday.de" site_id="ORF3" lang="country_DE" xmltv_id="">ORF III</channel>
+  <channel site="tvtoday.de" site_id="ORFSP" lang="country_DE" xmltv_id="">ORF Sport Plus</channel>
+  <channel site="tvtoday.de" site_id="PASS" lang="country_DE" xmltv_id="">RTL Passion</channel>
+  <channel site="tvtoday.de" site_id="PBOY" lang="country_DE" xmltv_id="">Playboy TV Europe</channel>
+  <channel site="tvtoday.de" site_id="PHOEN" lang="country_DE" xmltv_id="">Phoenix</channel>
+  <channel site="tvtoday.de" site_id="PRO7" lang="country_DE" xmltv_id="">ProSieben</channel>
+  <channel site="tvtoday.de" site_id="PRO7F" lang="country_DE" xmltv_id="">ProSieben Fun</channel>
+  <channel site="tvtoday.de" site_id="PRO7M" lang="country_DE" xmltv_id="">ProSieben Maxx</channel>
+  <channel site="tvtoday.de" site_id="PRTV" lang="country_DE" xmltv_id="">Prime HD</channel>
+  <channel site="tvtoday.de" site_id="PULS4" lang="country_DE" xmltv_id="">PULS 4</channel>
+  <channel site="tvtoday.de" site_id="PULS8" lang="country_DE" xmltv_id="">PULS acht</channel>
+  <channel site="tvtoday.de" site_id="QVC" lang="country_DE" xmltv_id="">QVC</channel>
+  <channel site="tvtoday.de" site_id="QVCP" lang="country_DE" xmltv_id="">QVC2</channel>
+  <channel site="tvtoday.de" site_id="RBB" lang="country_DE" xmltv_id="">RBB</channel>
+  <channel site="tvtoday.de" site_id="RBTV" lang="country_DE" xmltv_id="">Rocket Beans TV</channel>
+  <channel site="tvtoday.de" site_id="RIC" lang="country_DE" xmltv_id="">Ric</channel>
+  <channel site="tvtoday.de" site_id="ROM" lang="country_DE" xmltv_id="">Romance TV</channel>
+  <channel site="tvtoday.de" site_id="RTL" lang="country_DE" xmltv_id="">RTL</channel>
+  <channel site="tvtoday.de" site_id="RTL2" lang="country_DE" xmltv_id="">RTL Zwei</channel>
+  <channel site="tvtoday.de" site_id="RTL-C" lang="country_DE" xmltv_id="">RTL Crime</channel>
+  <channel site="tvtoday.de" site_id="RTL-L" lang="country_DE" xmltv_id="">RTL Living</channel>
+  <channel site="tvtoday.de" site_id="RTL-N" lang="country_DE" xmltv_id="">Nitro</channel>
+  <channel site="tvtoday.de" site_id="RTLPL" lang="country_DE" xmltv_id="">RTLup</channel>
+  <channel site="tvtoday.de" site_id="S1PLU" lang="country_DE" xmltv_id="">Sportdigital1+</channel>
+  <channel site="tvtoday.de" site_id="SAT1" lang="country_DE" xmltv_id="">Sat.1</channel>
+  <channel site="tvtoday.de" site_id="SAT1E" lang="country_DE" xmltv_id="">Sat.1 Emotions</channel>
+  <channel site="tvtoday.de" site_id="SAT1G" lang="country_DE" xmltv_id="">Sat.1 Gold</channel>
+  <channel site="tvtoday.de" site_id="SCIFI" lang="country_DE" xmltv_id="">sky sci-fi</channel>
+  <channel site="tvtoday.de" site_id="SERVUSA" lang="country_DE" xmltv_id="">Servus TV Österreich</channel>
+  <channel site="tvtoday.de" site_id="SF1" lang="country_DE" xmltv_id="">SRF 1</channel>
+  <channel site="tvtoday.de" site_id="SF2" lang="country_DE" xmltv_id="">SRF 2</channel>
+  <channel site="tvtoday.de" site_id="SHOT" lang="country_DE" xmltv_id="">Show Turk</channel>
+  <channel site="tvtoday.de" site_id="SILVE" lang="country_DE" xmltv_id="">Silverline</channel>
+  <channel site="tvtoday.de" site_id="SIXX" lang="country_DE" xmltv_id="">sixx</channel>
+  <channel site="tvtoday.de" site_id="SKLAR" lang="country_DE" xmltv_id="">sonnenklar.TV</channel>
+  <channel site="tvtoday.de" site_id="SKY1" lang="country_DE" xmltv_id="">sky one</channel>
+  <channel site="tvtoday.de" site_id="SKY-A" lang="country_DE" xmltv_id="">sky cinema action</channel>
+  <channel site="tvtoday.de" site_id="SKY-CR" lang="country_DE" xmltv_id="">sky crime</channel>
+  <channel site="tvtoday.de" site_id="SKY-D" lang="country_DE" xmltv_id="">sky documentaries</channel>
+  <channel site="tvtoday.de" site_id="SKY-F" lang="country_DE" xmltv_id="">sky cinema family</channel>
+  <channel site="tvtoday.de" site_id="SKY-K" lang="country_DE" xmltv_id="">sky krimi</channel>
+  <channel site="tvtoday.de" site_id="SKY-N" lang="country_DE" xmltv_id="">sky cinema classics</channel>
+  <channel site="tvtoday.de" site_id="SKY-NA" lang="country_DE" xmltv_id="">sky nature</channel>
+  <channel site="tvtoday.de" site_id="SKYAT" lang="country_DE" xmltv_id="">sky atlantic</channel>
+  <channel site="tvtoday.de" site_id="SKYCH" lang="country_DE" xmltv_id="">sky cinema highlights</channel>
+  <channel site="tvtoday.de" site_id="SKYF1" lang="country_DE" xmltv_id="">sky sport f1</channel>
+  <channel site="tvtoday.de" site_id="SKYSG" lang="country_DE" xmltv_id="">sky sport golf</channel>
+  <channel site="tvtoday.de" site_id="SKYSH" lang="country_DE" xmltv_id="">sky showcase</channel>
+  <channel site="tvtoday.de" site_id="SKYSM" lang="country_DE" xmltv_id="">sky sport mix</channel>
+  <channel site="tvtoday.de" site_id="SKYSPL" lang="country_DE" xmltv_id="">sky sport premier league</channel>
+  <channel site="tvtoday.de" site_id="SKYST" lang="country_DE" xmltv_id="">sky sport tennis</channel>
+  <channel site="tvtoday.de" site_id="SKYSTE" lang="country_DE" xmltv_id="">sky sport top event</channel>
+  <channel site="tvtoday.de" site_id="SNHD" lang="country_DE" xmltv_id="">sky sport news</channel>
+  <channel site="tvtoday.de" site_id="SONY" lang="country_DE" xmltv_id="">AXN White</channel>
+  <channel site="tvtoday.de" site_id="SP-GE" lang="country_DE" xmltv_id="">Spiegel Geschichte</channel>
+  <channel site="tvtoday.de" site_id="SPO-A" lang="country_DE" xmltv_id="">sky sport austria</channel>
+  <channel site="tvtoday.de" site_id="SPO-D" lang="country_DE" xmltv_id="">Sportdigital Fußball</channel>
+  <channel site="tvtoday.de" site_id="SPORT" lang="country_DE" xmltv_id="">sport1</channel>
+  <channel site="tvtoday.de" site_id="SPTVW" lang="country_DE" xmltv_id="">Curiosity Channel</channel>
+  <channel site="tvtoday.de" site_id="STTV" lang="country_DE" xmltv_id="">Star TV</channel>
+  <channel site="tvtoday.de" site_id="SUPER" lang="country_DE" xmltv_id="">Super RTL</channel>
+  <channel site="tvtoday.de" site_id="SWR" lang="country_DE" xmltv_id="">SWR/SR</channel>
+  <channel site="tvtoday.de" site_id="TAG24" lang="country_DE" xmltv_id="">tagesschau24</channel>
+  <channel site="tvtoday.de" site_id="TELE5" lang="country_DE" xmltv_id="">Tele 5</channel>
+  <channel site="tvtoday.de" site_id="TLC" lang="country_DE" xmltv_id="">TLC</channel>
+  <channel site="tvtoday.de" site_id="TMAX" lang="country_DE" xmltv_id="">beIN Gurme</channel>
+  <channel site="tvtoday.de" site_id="TNT-C" lang="country_DE" xmltv_id="">Warner TV Comedy</channel>
+  <channel site="tvtoday.de" site_id="TNT-F" lang="country_DE" xmltv_id="">Warner TV Film</channel>
+  <channel site="tvtoday.de" site_id="TNT-S" lang="country_DE" xmltv_id="">Warner TV Serie</channel>
+  <channel site="tvtoday.de" site_id="TOGGO" lang="country_DE" xmltv_id="">TOGGO plus</channel>
+  <channel site="tvtoday.de" site_id="TRACE" lang="country_DE" xmltv_id="">Trace TV</channel>
+  <channel site="tvtoday.de" site_id="TRAVELXP" lang="country_DE" xmltv_id="">travelxp 4K</channel>
+  <channel site="tvtoday.de" site_id="TV2" lang="country_DE" xmltv_id="">TV2</channel>
+  <channel site="tvtoday.de" site_id="TV5" lang="country_DE" xmltv_id="">TV 5</channel>
+  <channel site="tvtoday.de" site_id="TVB" lang="country_DE" xmltv_id="">TV Berlin</channel>
+  <channel site="tvtoday.de" site_id="TVM" lang="country_DE" xmltv_id="">münchen.tv</channel>
+  <channel site="tvtoday.de" site_id="UHD1" lang="country_DE" xmltv_id="">UHD1</channel>
+  <channel site="tvtoday.de" site_id="UNIVE" lang="country_DE" xmltv_id="">Universal TV</channel>
+  <channel site="tvtoday.de" site_id="VOX" lang="country_DE" xmltv_id="">VOX</channel>
+  <channel site="tvtoday.de" site_id="VOXUP" lang="country_DE" xmltv_id="">VOXup</channel>
+  <channel site="tvtoday.de" site_id="WDR" lang="country_DE" xmltv_id="">WDR</channel>
+  <channel site="tvtoday.de" site_id="WDWTV" lang="country_DE" xmltv_id="">Welt der Wunder TV</channel>
+  <channel site="tvtoday.de" site_id="WELT" lang="country_DE" xmltv_id="">WELT</channel>
+  <channel site="tvtoday.de" site_id="ZDF" lang="country_DE" xmltv_id="">ZDF</channel>
+  <channel site="tvtoday.de" site_id="ZINFO" lang="country_DE" xmltv_id="">ZDFinfo</channel>
+</channels>

@@ -12,6 +12,16 @@ const currentYear = new Date().getFullYear()
 const tz = 'Asia/Jakarta'
 
 module.exports = {
+  request: {
+    headers: {
+      'user-agent': 'Mozilla/5.0 (Linux; Linux x86_64) AppleWebKit/600.3 (KHTML, like Gecko) Chrome/48.0.2544.291 Safari/600',
+      'Accept': 'text/html,application/xhtml+xml,application/json,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language': 'en-US,en;q=0.9',
+      'Accept-Encoding': 'gzip, deflate, br',
+      'Cache-Control': 'no-cache',
+      'Connection': 'keep-alive'
+    }
+  },
   site: 'moji.id',
   days: 2,
   url: 'https://moji.id/schedule',

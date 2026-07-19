@@ -87,7 +87,7 @@ function parseStart($item, date) {
   if (!timeString) return null
   const dateString = `${date.format('MM/DD/YYYY')} ${timeString}`
 
-  return dayjs.utc(dateString, 'MM/DD/YYYY HH:mm')
+  return dayjs.utc(dateString, 'MM/DD/YYYY HH:mma')
 }
 
 function parseTitle($item) {

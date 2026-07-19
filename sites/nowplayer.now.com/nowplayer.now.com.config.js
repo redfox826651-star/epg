@@ -35,7 +35,13 @@ module.exports = {
   },
   async channels({ lang }) {
     const html = await axios
-      .get('https://nowplayer.now.com/channels', { headers: { Accept: 'text/html' } })
+      .get('https://nowplayer.now.com/channels', { headers: {
+      'user-agent': 'Mozilla/5.0 (Linux; Linux x86_64) AppleWebKit/600.3 (KHTML, like Gecko) Chrome/48.0.2544.291 Safari/600',
+      'Accept': 'text/html,application/xhtml+xml,application/json,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language': 'en-US,en;q=0.9',
+      'Accept-Encoding': 'gzip, deflate, br',
+      'Cache-Control': 'no-cache',
+      'Connection': 'keep-alive', Accept: 'text/html' } })
       .then(r => r.data)
       .catch(console.log)
 

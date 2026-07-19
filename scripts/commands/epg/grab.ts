@@ -1,6 +1,6 @@
 import { Logger, Timer, Collection, Template } from '@freearhey/core'
 import epgGrabber, { EPGGrabber, EPGGrabberMock } from 'epg-grabber'
-import { loadJs, parseProxy, parseNumber } from '../../core'
+import { loadJs, parseProxy, parseNumber, attachFlareSolverrFallback } from '../../core'
 import { CurlBody } from 'curl-generator/dist/bodies/body'
 import { Channel, Guide, Program } from '../../models'
 import { SocksProxyAgent } from 'socks-proxy-agent'
@@ -155,6 +155,8 @@ async function main() {
     },
     error => Promise.reject(error)
   )
+
+  attachFlareSolverrFallback(grabber.client.instance, { proxy: options.proxy, logger })
 
   logger.info('loading channels...')
   const storage = new Storage()

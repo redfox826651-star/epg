@@ -16,7 +16,11 @@ module.exports = {
         : `https://www.canalplus.com/${region}/programme-tv/`
 
     const data = await axios
-      .get(baseUrl)
+      .get(baseUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0'
+        }
+      })
       .then(r => r.data.toString())
       .catch(err => console.log(err))
 
@@ -25,6 +29,13 @@ module.exports = {
     const diff = date.diff(dayjs.utc().startOf('d'), 'd')
 
     return `https://hodor.canalplus.pro/api/v2/${path}/channels/${token}/${site_id}/broadcasts/day/${diff}`
+  },
+  request: {
+    async headers() {
+      return {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0'
+      }
+    }
   },
   async parser({ content }) {
     let programs = []
@@ -102,7 +113,11 @@ module.exports = {
     const path = paths[country]
     const url = `https://secure-webtv-static.canal-plus.com/metadata/${path}/all/v2.2/globalchannels.json`
     const data = await axios
-      .get(url)
+      .get(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0'
+        }
+      })
       .then(r => r.data)
       .catch(console.log)
 
@@ -150,7 +165,11 @@ async function loadProgramDetails(item) {
   if (!item.onClick || !item.onClick.URLPage) return {}
 
   return await axios
-    .get(item.onClick.URLPage)
+    .get(item.onClick.URLPage, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0'
+      }
+    })
     .then(r => r.data)
     .catch(console.error)
 }

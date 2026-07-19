@@ -12,6 +12,16 @@ dayjs.extend(customParseFormat)
 dayjs.extend(isoWeek)
 
 module.exports = {
+  request: {
+    headers: {
+      'user-agent': 'Mozilla/5.0 (Linux; Linux x86_64) AppleWebKit/600.3 (KHTML, like Gecko) Chrome/48.0.2544.291 Safari/600',
+      'Accept': 'text/html,application/xhtml+xml,application/json,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language': 'en-US,en;q=0.9',
+      'Accept-Encoding': 'gzip, deflate, br',
+      'Cache-Control': 'no-cache',
+      'Connection': 'keep-alive'
+    }
+  },
   site: 'getafteritmedia.com',
   days: 2,
   url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQcDmb9OnO0HpbjINfGaepqgGTp3VSmPs7hs654n3sRKrq4Q9y6uPSEvVvq9MwTLYG_n_V7vh0rFYP9/pubhtml',
