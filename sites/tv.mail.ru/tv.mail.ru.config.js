@@ -1,45 +1,48 @@
-const { DateTime } = require('luxon')
+const dayjs = require('dayjs')
+const utc = require('dayjs/plugin/utc')
 const axios = require('axios')
 const uniqBy = require('lodash.uniqby')
+
+dayjs.extend(utc)
 
 module.exports = {
   request: {
     headers: {
-      'user-agent': 'Mozilla/5.0 (Linux; Linux x86_64) AppleWebKit/600.3 (KHTML, like Gecko) Chrome/48.0.2544.291 Safari/600',
-      'Accept': 'text/html,application/xhtml+xml,application/json,application/xml;q=0.9,*/*;q=0.8',
-      'Accept-Language': 'en-US,en;q=0.9',
-      'Accept-Encoding': 'gzip, deflate, br',
-      'Cache-Control': 'no-cache',
-      'Connection': 'keep-alive'
+      'user-agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'x-requested-with': 'XMLHttpRequest',
+      'Accept': 'application/json, text/javascript, */*; q=0.01',
+      'Accept-Language': 'en-US,en;q=0.9'
     }
   },
   site: 'tv.mail.ru',
   days: 2,
   delay: 1000,
+  // The old /ajax/channel/ endpoint was removed (404). The schedule now lives at
+  // /ajax/service/channels/schedule/ and returns JSON with absolute unix
+  // timestamps (start_ts/stop_ts), so no timezone handling is required.
   url({ channel, date }) {
-    return `https://tv.mail.ru/ajax/channel/?region_id=70&channel_id=${
+    return `https://tv.mail.ru/ajax/service/channels/schedule/?channel_id=${
       channel.site_id
     }&date=${date.format('YYYY-MM-DD')}`
   },
-  parser({ content, date }) {
+  parser({ content }) {
     const programs = []
-    const items = parseItems(content)
-    items.forEach(item => {
-      const prev = programs[programs.length - 1]
-      let start = parseStart(item, date)
-      if (prev) {
-        if (start < prev.start) {
-          start = start.plus({ days: 1 })
-          date = date.add(1, 'd')
-        }
-        prev.stop = start
-      }
-      const stop = start.plus({ hours: 1 })
+    let json
+    try {
+      json = JSON.parse(content)
+    } catch {
+      return programs
+    }
+
+    const events = (json && json.data && json.data.events) || []
+    events.forEach(item => {
+      if (!item.start_ts) return
       programs.push({
         title: item.name,
         category: parseCategory(item),
-        start,
-        stop
+        start: dayjs.unix(item.start_ts).utc(),
+        stop: dayjs.unix(item.stop_ts || item.start_ts + 3600).utc()
       })
     })
 
@@ -91,12 +94,6 @@ async function getTotalPageCount(region) {
   return data.total
 }
 
-function parseStart(item, date) {
-  const dateString = `${date.format('YYYY-MM-DD')} ${item.start}`
-
-  return DateTime.fromFormat(dateString, 'yyyy-MM-dd HH:mm', { zone: 'Europe/Moscow' }).toUTC()
-}
-
 function parseCategory(item) {
   const categories = {
     1: 'Фильм',
@@ -121,12 +118,4 @@ function parseCategory(item) {
         value: categories[item.category_id]
       }
     : null
-}
-
-function parseItems(content) {
-  const json = JSON.parse(content)
-  if (!Array.isArray(json.schedule) || !json.schedule[0]) return []
-  const event = json.schedule[0].event || []
-
-  return [...event.past, ...event.current]
 }
