@@ -37,8 +37,10 @@ module.exports = {
         .forEach(el => {
           let title = parseText($(el).find('h4'))
           const [s, e] = title.substr(0, title.indexOf(' ')).split('-') || [null, null]
-          const start = dayjs.utc(`${date.format('YYYY-MM-DD')} ${s}`, 'YYYY-MM-DD HH:nn')
-          const stop = dayjs.utc(`${date.format('YYYY-MM-DD')} ${e}`, 'YYYY-MM-DD HH:nn')
+          const start = dayjs.utc(`${date.format('YYYY-MM-DD')} ${s}`, 'YYYY-MM-DD HH:mm')
+          let stop = dayjs.utc(`${date.format('YYYY-MM-DD')} ${e}`, 'YYYY-MM-DD HH:mm')
+          // programmes that roll past midnight list an end time earlier than the start
+          if (start.isValid() && stop.isValid() && !stop.isAfter(start)) stop = stop.add(1, 'day')
           title = title.substr(title.indexOf(' ') + 1)
           const [, season, episode] = title.match(/ S(\d+) E(\d+)/) || [null, null, null]
           const description = parseText($(el).find('p'))

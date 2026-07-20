@@ -12,7 +12,7 @@ dayjs.extend(customParseFormat)
 
 doFetch.setDebugger(debug)
 
-const detailedGuide = true
+const detailedGuide = false
 const tz = 'Europe/London'
 
 module.exports = {
@@ -41,6 +41,7 @@ module.exports = {
         .forEach(el => {
           const td = $(el).find('td:eq(1)')
           const title = td.find('h5 a')
+          if (!title.attr('href')) return
           if (detailedGuide) {
             queues.push({ url: title.attr('href'), params: module.exports.request })
           } else {
