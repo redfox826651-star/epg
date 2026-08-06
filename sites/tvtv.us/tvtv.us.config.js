@@ -1,26 +1,61 @@
 const cheerio = require('cheerio')
 const dayjs = require('dayjs')
 const utc = require('dayjs/plugin/utc')
+const os = require('os')
+const { execFileSync } = require('child_process')
 
 dayjs.extend(utc)
 
-// tvtv.us moved to an HTMX site. The schedule for a station is served by
-// /partial/source/{startOfDayUtcMs}/{stationId} and requires the `HX-Request`
-// header (otherwise the origin 404s). No lineup is needed - the grabber's
-// site_id IS the tvtv.us station id. Each airing carries an absolute unix-ms
-// timestamp (data-time) and a runtime in minutes, so times are exact UTC.
-//
-// NOTE: tvtv.us's Cloudflare challenges some proxy IPs (e.g. iproyal residential)
-// for this endpoint. Use a proxy that CF does not challenge for tvtv.us.
+// Cloudflare on tvtv.us fingerprints the TLS client (JA3): Node/axios is
+// challenged, a real Chrome is not. We fetch through curl-impersonate (Chrome
+// JA3) instead, forwarding the grabber's proxy (GRAB_PROXY, set by getEPG) and
+// the HX-* headers. The schedule endpoint is /partial/source/{startOfDayMs}/
+// {stationId} and REQUIRES the HX-Request header; no lineup is needed - the
+// grabber's site_id IS the tvtv.us station id. Airings carry an absolute
+// unix-ms data-time + data-runtime (minutes) => exact UTC.
+const CURL_IMPERSONATE =
+  process.env.CURL_IMPERSONATE || `${os.homedir()}/curl-impersonate/curl_chrome136`
+
+function curlImpersonateAdapter(config) {
+  const args = ['-s', '--max-time', '60', '--compressed']
+
+  const proxy = process.env.GRAB_PROXY
+  if (proxy) args.push('--proxy', proxy)
+
+  // Forward only the HX-* / Referer headers; let curl-impersonate supply the
+  // Chrome UA + sec-ch-ua/Accept headers so the fingerprint stays consistent.
+  const headers =
+    config.headers && typeof config.headers.toJSON === 'function'
+      ? config.headers.toJSON()
+      : config.headers || {}
+  for (const key of Object.keys(headers)) {
+    if (/^(hx-|referer$)/i.test(key) && headers[key] != null) {
+      args.push('-H', `${key}: ${headers[key]}`)
+    }
+  }
+
+  args.push(config.url)
+
+  const data = execFileSync(CURL_IMPERSONATE, args, {
+    maxBuffer: 32 * 1024 * 1024
+  }).toString()
+
+  return Promise.resolve({
+    data,
+    status: 200,
+    statusText: 'OK',
+    headers: {},
+    config,
+    request: {}
+  })
+}
+
 module.exports = {
   site: 'tvtv.us',
   days: 2,
   request: {
+    adapter: curlImpersonateAdapter,
     headers: {
-      'User-Agent':
-        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
-      'Accept': '*/*',
-      'Accept-Language': 'en-US,en;q=0.9',
       'HX-Request': 'true',
       'HX-Current-URL': 'https://tvtv.us/'
     }
@@ -40,8 +75,7 @@ module.exports = {
       const runtime = Number($a.attr('data-runtime'))
       if (!startMs || !runtime) return
 
-      // Long airings repeat the label in a second inner <div> (a "...Title"
-      // sticky copy), so scope to the first inner <div> when present.
+      // Long airings repeat the label in a second inner <div>; scope to the first.
       const $inner = $a.children('div').first()
       const $scope = $inner.length ? $inner : $a
       const subTitle = $scope.find('.gridSubtitle').first().text().trim()
@@ -59,12 +93,7 @@ module.exports = {
       const start = dayjs.utc(startMs)
       const stop = start.add(runtime, 'minute')
 
-      programs.push({
-        title,
-        subTitle: subTitle || null,
-        start,
-        stop
-      })
+      programs.push({ title, subTitle: subTitle || null, start, stop })
     })
 
     return programs
